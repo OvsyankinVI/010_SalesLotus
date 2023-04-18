@@ -407,7 +407,7 @@ html {
     padding-left: 91px;
     width: 100%;
   }
-  .swiper-slide {
+  .sw {
     width: 300px !important;
   }
   @media screen and (max-width: 1180px) {
@@ -1124,7 +1124,9 @@ html {
   .corp-SLA-flex-2 {
     display: flex;
     justify-content: space-between;
-    margin: 0 188px;
+    max-width: 1064px;
+    width: 100%;
+    margin: 0 auto;
   }
   
   .corp-SLA-flex-2-h2 {
@@ -1138,10 +1140,166 @@ html {
     margin-bottom: 283px;
   }
   
-  .corp-SLA-flex-2-carusel {}
   .br {
     display: none;
   }
+  
+  /*  */
+  .subscribe-to-our {
+    position: relative;
+    line-height: 28px;
+    font-weight: 600;
+  }
+
+  /*  */
+  .frame-parent,
+  .subscribe-to-our-newsletter-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-sm);
+  }
+  .frame-parent {
+    flex-direction: row;
+    font-size: var(--font-size-base);
+    color: var(--color-gray-1100);
+  }
+  /*  */
+  .subscribe-to-our-newsletter-parent {
+    position: absolute;
+    top: 48px;
+    left: 513px;
+    flex-direction: column;
+    text-align: center;
+    font-size: var(--font-size-4xl);
+  }
+  /*  */
+  .company-name,
+  .every-quote,
+  .murthy-ts {
+    position: relative;
+    line-height: 25.2px;
+  }
+  /*  */
+  .murthy-ts {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  /*  */
+  .company-name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+  }
+  /*  */
+  .div,
+  .murthy-ts-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-xs);
+  }
+  /*  */
+  .murthy-ts-parent {
+    align-self: stretch;
+    flex-direction: row;
+    font-size: var(--font-size-lg);
+  }
+  .div {
+    background: #FAFAFA;
+    width: 469.8px;
+    border-radius: 16px;
+    flex-direction: column;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+  }
+  /*  */
+  .company-name1,
+  .every-quote1 {
+    position: relative;
+    line-height: 28px;
+  }
+  /*  */
+  .every-quote1 {
+    align-self: stretch;
+  }
+  /*  */
+  .company-name1 {
+    font-size: var(--font-size-sm);
+  }
+  /*  */
+  .div1,
+  .murthy-ts-group,
+  .testimonials1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  /*  */
+  .murthy-ts-group {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--gap-sm);
+    font-size: var(--body-p1-semibold-size);
+  }
+
+  /*  */
+  .div1,
+  .testimonials1 {
+    flex-direction: column;
+  }
+  .div1 {
+    align-self: stretch;
+    border-radius: var(--br-4xl);
+    background-color: var(--neutral-06);
+    padding: var(--padding-xl) var(--padding-5xl);
+    align-items: flex-start;
+    gap: var(--gap-sm);
+    font-size: var(--font-size-base);
+  }
+  /*  */
+  .testimonials1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 523px;
+    width: 100%;
+    align-items: center;
+    /* gap: var(--gap-xl); */
+  }
+
+  /*  */
+  .testimonial {
+    top: 118px;
+    position: relative;
+    max-width: 523px;
+    width: 100%;
+    height: 342px;
+    flex-shrink: 0;
+    overflow: hidden;
+    font-size: var(--font-size-xs);
+  }
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+    .div.swiper-slide.swiper-slide-active {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-self: stretch;
+    border-radius: var(--br-4xl);
+    background-color: var(--neutral-06);
+    padding: var(--padding-xl) var(--padding-5xl);
+    align-items: flex-start;
+    gap: var(--gap-sm);
+    font-size: var(--font-size-base);
+    width: 100%;
+    opacity: 1;
+  }
+
   @media screen and (max-width: 1070px) {
     .corp-SLA {
         height: 1025px;
@@ -1149,6 +1307,10 @@ html {
     .corp-SLA-flex-2 {
         display: block;
         margin: 0 auto;
+    }
+    .testimonial {
+        margin: 0 auto;
+        top: 71px;
     }
     .corp-SLA-flex-2-h2 {
         display: block;
@@ -1174,6 +1336,34 @@ html {
   
   }
   @media screen and (max-width: 750px) {
+    .every-quote1, .every-quote {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .subscribe-to-our, .murthy-ts {
+        font-size: 14px;
+        line-height: 18px; 
+    }
+    .company-name1, .company-name {
+        font-size: 10px;
+        line-height: 18px;
+    }
+    .testimonial {
+        top: 30px;
+        max-width: 342px;
+        height: 320px;
+    }
+    .div {
+        height: 86.45px !important;
+        width: 307px;
+    }
+    .div.swiper-slide.swiper-slide-active {
+        gap: 7px;
+    }
+      .div, .div1 {
+        gap: 5px;
+      }
     .corp-SLA-flex-1 {
         display: block;
     }
@@ -1273,6 +1463,7 @@ html {
   .about__flex-item1-buttom:active {
     background-color: var(--color-brand_color-3);
   }
+
   @media screen and (max-width: 1200px) {
     .max-efficincy {
         background-image: url(../img/max-efficincy-bg-tabl.png);

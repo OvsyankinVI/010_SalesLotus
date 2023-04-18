@@ -45,15 +45,21 @@ breakpoints: {
 var swiper1 = new Swiper(".mySwiper", {
   direction: "vertical",
   // loop: true,
+  centeredSlides: true,
+  allowTouchMove: false,
   autoplay: {
-    delay: 1500,
+    delay: 1000,
   },
-  autoplayTimeout: 2000,
+  autoplayTimeout: 1000,
   slidesPerView: 3,
   spaceBetween: 24,
   speed: 700,
-
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
+
 
 let activeBackSlider = document.querySelector(".active-slider");
 let tabs = document.querySelectorAll(".ft");
