@@ -1,50 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
     let elems = document.querySelectorAll('.sidenav');
     let instances = M.Sidenav.init(elems);
-    let modal = document.querySelectorAll('.modal');
-    let instances_modal = M.Modal.init(modal);
-    let car = document.querySelectorAll('.carousel');
-    let instances_car = M.Carousel.init(car);
   });
 
   const faqQuestions = document.querySelectorAll(".question");
-// const answers = document.querySelectorAll(".answer");
 
 faqQuestions.forEach((question) => {
   question.addEventListener("click", (e) => {
     question.classList.toggle("active");
     const answer = question.nextElementSibling;
     if (question.classList.contains("active")) {
-      // answers.forEach((a) => {
-      //   a.style.height = 0;
-      // });
       answer.style.height = `${answer.scrollHeight}px`;
     } else {
       answer.style.height = 0;
     }
   });
 });
+
 const swiper = new Swiper('.swiper', {
   spaceBetween: 24,
-breakpoints: {
-    1200: {
-      slidesPerView: 3,
-    },
-    1080: {
-      slidesPerView: 2,
-    },
-     850: {
-      slidesPerView: 1.5,
+  autoplayTimeout: 10,
+    autoplay: {
+    delay: 3000,
+  },
+  breakpoints: {
+        1000: {
+          slidesPerView: 3,
+      }, 
+      850: {
+        slidesPerView: 2.5,
+    }, 
+          650: {
+        slidesPerView: 2,
+    }, 
+      450: {
+        slidesPerView: 1.5,
+    }, 
+    390: {
+      slidesPerView: 1.1,
   }, 
-    750: {
-      slidesPerView: 1.5,
-    },
-  } 
+  }
 });
 
 var swiper1 = new Swiper(".mySwiper", {
   direction: "vertical",
-  // loop: true,
   centeredSlides: true,
   allowTouchMove: false,
   autoplay: {
@@ -59,7 +58,6 @@ var swiper1 = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
-
 
 let activeBackSlider = document.querySelector(".active-slider");
 let tabs = document.querySelectorAll(".ft");
@@ -94,16 +92,11 @@ document.getElementById("btn4").addEventListener("click", function () {
     img[0].src = "img/polygon-62.svg"
     img[1].src = "img/polygon-63.svg"
     img[2].src = "img/polygon-63.svg"
-    /* activeBackSlider.style.width = "33%"; */
   } else {
     slide4.style.transitionDelay = "200ms";
     slide5.style.transitionDelay = "400ms";
     slide6.style.transitionDelay = "600ms";
-  }
-    // slide1.style.top = "-100%";
-    // slide2.style.top = "-100%";
-    // slide3.style.top = "-200%";
-          
+  }       
 });
 
 document.getElementById("btn5").addEventListener("click", function () {
@@ -120,8 +113,6 @@ document.getElementById("btn5").addEventListener("click", function () {
     img[0].src = "img/polygon-63.svg";
     img[1].src = "img/polygon-62.svg";
     img[2].src = "img/polygon-63.svg";
-    /* activeBackSlider.style.width = "33%"; */
-
   } else {
     slide4.style.transitionDelay = "200ms";
     slide5.style.transitionDelay = "400ms";
@@ -152,14 +143,7 @@ document.getElementById("btn6").addEventListener("click", function () {
     img[0].src = "img/polygon-63.svg"
     img[1].src = "img/polygon-63.svg"
     img[2].src = "img/polygon-62.svg"
-    /* activeBackSlider.style.width = "35%"; */
-  } else {
-    // slide3.style.top = "0%";
-    // slide1.style.top = "-100%";
-    // slide2.style.top = "-200%";
-    // slide3.style.transitionDelay = "200ms";
   }
-  
 });
 
 function removeActive(arr) {
