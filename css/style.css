@@ -877,6 +877,9 @@ html {
 .mob {
     display: none;
 }
+.ft {
+  cursor: pointer;
+}
 @media screen and (max-width: 1180px) {
     .features {
     top: 1735px;
@@ -1803,8 +1806,6 @@ html {
     width: 176px;
     align-items: end;
     margin-right: 20px;
-  }
-  .footer__grid-item-4-a {
   }
   .footer__grid-item-4-a-img {
     cursor: pointer;

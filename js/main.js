@@ -19,10 +19,6 @@ faqQuestions.forEach((question) => {
 
 const swiper = new Swiper('.swiper', {
   spaceBetween: 24,
-  autoplayTimeout: 10,
-    autoplay: {
-    delay: 3000,
-  },
   breakpoints: {
         1000: {
           slidesPerView: 3,
